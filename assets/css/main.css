@@ -80,12 +80,16 @@ header ul a.learnMore:hover {
     }
 }
 @media only screen and (max-width: 385px) {
+    header {
+        padding-top: 75px;
+    }
     header h1 {
+        text-align: center;
         font-size: 40px;
         line-height: 50px;
     }
     header ul {
-        margin-top: 50px;
+        margin-top: 30px;
         text-align: center;
     }
     header ul a {
