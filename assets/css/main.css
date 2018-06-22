@@ -30,11 +30,11 @@ header ul {
     height: 50px;
 }
 header ul a {
-    height: 50px;
+    height: 55px;
     font-size: 25px;
-    padding: 0 12.5px;
+    padding: 0 15px;
     text-decoration: none;
-    line-height: 48px;
+    line-height: 53px;
     color: #fff;
 }
 
@@ -73,13 +73,14 @@ header ul a.learnMore:hover {
         line-height: 65px;
     }
 }
+
 @media only screen and (max-width: 500px) {
     header {
         padding: 25px;
         padding-top: 50px;
     }
 }
-@media only screen and (max-width: 385px) {
+@media only screen and (max-width: 395px) {
     header {
         padding-top: 75px;
     }
