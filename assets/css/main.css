@@ -115,6 +115,7 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 12.5px 100px;
+    transition: background-color 0.25s;
 }
 nav a {
     color: rgba(255, 255, 255, 0.55);
@@ -198,6 +199,7 @@ nav button.menuButton svg.closeIcon {
 @media only screen and (max-width: 755px) {
     nav {
         padding: 12.5px;
+        transition: none;
     }
     body.activeNavLinks {
         overflow: hidden;
