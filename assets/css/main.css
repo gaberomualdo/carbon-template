@@ -65,6 +65,7 @@ header ul a.learnMore:hover {
 @media only screen and (max-width: 875px) {
     header {
         padding: 75px;
+        padding-top: 100px;
     }
 }
 @media only screen and (max-width: 800px) {
@@ -77,13 +78,10 @@ header ul a.learnMore:hover {
 @media only screen and (max-width: 500px) {
     header {
         padding: 25px;
-        padding-top: 50px;
+        padding-top: 100px;
     }
 }
 @media only screen and (max-width: 395px) {
-    header {
-        padding-top: 75px;
-    }
     header h1 {
         text-align: center;
         font-size: 40px;
