@@ -450,24 +450,32 @@ section#contact {
 section#contact p.desc {
     width: 500px;
     display: inline-block;
-    margin-bottom: 25px;
 }
 
 section#contact ul {
     display: block;
-    margin-top: 50px;
     text-align: center;
+}
+section#contact ul li {
+    display: inline-block;
+    margin: 0 25px;
+    margin-top: 40px;
 }
 section#contact ul li p,section#contact ul li svg{
     display: inline-block;
-    vertical-align: text-top;
-    height: 50px;
     line-height: 50px;
     font-size: 25px;
 }
+section#contact ul li svg {
+    width: 50px;
+    height: 50px;
+}
+section#contact ul li p {
+    text-align: left;
+}
 
 @media only screen and (max-width: 500px) {
-    section#download p.desc {
+    section#contact p.desc {
         width: 90%;
     }
 }
