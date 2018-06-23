@@ -478,6 +478,17 @@ section#contact ul li svg path {
 section#contact ul li p {
     text-align: left;
 }
+section#contact a {
+    text-decoration: none;
+    border-bottom: 1px dotted #c7cbd4;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    color: inherit;
+}
+section#contact a:hover{
+    border-color: #2188ff;
+    color: #2188ff;
+}
 
 @media only screen and (max-width: 500px) {
     section#contact p.desc {
