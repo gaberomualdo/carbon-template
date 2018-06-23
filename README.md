@@ -15,3 +15,4 @@ All HTML5 Rocket templates are licensed under the CC0 License, which means that 
 All photos and resources used are licensed under the CC0 License.
 
 - Header background photo from https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/44.jpg
+- Template section background photo from https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/55.jpg
