@@ -236,7 +236,7 @@ nav button.menuButton svg.closeIcon {
         overflow: auto;
         width: 100%;
         height: auto;
-        margin-top: 50px;
+        margin-top: calc(((100vh - 280px - 75px) / 2));
     }
     body.activeNavLinks nav ul a {
         display: block;
@@ -263,7 +263,7 @@ nav button.menuButton svg.closeIcon {
         width: 40px;
     }
     body.activeNavLinks nav ul {
-        margin-top: 60px;
+        margin-top: calc(((100vh - 280px - 65px) / 2));
     }
     body.activeNavLinks nav ul a {
         height: 60px;
