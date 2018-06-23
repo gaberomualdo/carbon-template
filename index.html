@@ -12,24 +12,24 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600,700,900" rel="stylesheet"></head>
 <body>
     <nav>
-        <a class="brandName scrollLink" href="#header">Carbon</a>
+        <a class="brandName scrollLink" scrolllink="#header">Carbon</a>
         <button class="menuButton">
             <svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
             <svg class="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23 20.168l-8.185-8.187 8.185-8.174-2.832-2.807-8.182 8.179-8.176-8.179-2.81 2.81 8.186 8.196-8.186 8.184 2.81 2.81 8.203-8.192 8.18 8.192z"/></svg>
         </button>
         <ul>
-            <a class="scrollLink" href="#about">About</a
-            ><a class="scrollLink" href="#template">Template</a
-            ><a class="scrollLink" href="#reviews">Reviews</a
-            ><a class="scrollLink" href="#download">Download</a
-            ><a class="scrollLink" href="#contact">Contact</a>
+            <a class="scrollLink" scrolllink="#about">About</a
+            ><a class="scrollLink" scrolllink="#template">Template</a
+            ><a class="scrollLink" scrolllink="#reviews">Reviews</a
+            ><a class="scrollLink" scrolllink="#download">Download</a
+            ><a class="scrollLink" scrolllink="#contact">Contact</a>
         </ul>
     </nav>
     <header id="header">
         <h1>Web design made simple.<br>With Carbon.</h1>
         <ul class="takeActionBtns">
-            <a href="#download" class="download scrollLink">Download Now</a>
-            <a href="#about" class="learnMore scrollLink">Learn More</a>
+            <a scrolllink="#download" class="download scrollLink">Download Now</a>
+            <a scrolllink="#about" class="learnMore scrollLink">Learn More</a>
         </ul>
     </header>
     
@@ -37,7 +37,7 @@
         <h1 class="headerLine">What We Do</h1>
         <div class="lineContainer"><div class="line"></div></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <br><a href="#about" class="learnMore scrollLink">Learn More</a>
+        <br><a scrolllink="#template" class="learnMore scrollLink">Learn More</a>
     </section>
     
     <section id="template">
@@ -86,7 +86,7 @@
     <section id="download">
         <h1 class="headerLine">Download Carbon Now!</h1>
         <div class="lineContainer"><div class="line"></div></div>
-        <a href="">Download Now</a>
+        <a href="#">Download Now</a>
     </section>
 
     <section id="contact">
@@ -110,6 +110,8 @@
         <p class="copyright">&copy; Carbon</p>
     </footer>
 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
     <script>
     
     // Nav Header Class Type Checking (nav has white background when not on top of page)
@@ -118,16 +120,27 @@
 
     function checkNavClassNameHeaderType(){
         if(document.getElementsByTagName("html")[0].scrollTop > 0){
-            document.querySelector("nav").classList.add("nonTopNav");
+            $("nav").addClass("nonTopNav");
         }else{
-            document.querySelector("nav").classList.remove("nonTopNav");
+            $("nav").removeClass("nonTopNav");;
         }
     }
 
     // Mobile Nav Menu Link Toggle Button Functionality
-    document.querySelector("nav button.menuButton").onclick = function(){
-        document.body.classList.toggle("activeNavLinks");
-    }
+    $("nav button.menuButton").on("click",function(){
+        $("body").toggleClass("activeNavLinks");
+    });
+
+    // Scroll Link Functionality
+    $(".scrollLink").on("click",function(){
+        $("body").removeClass("activeNavLinks");
+        var scrollTo = this.getAttribute("scrolllink");
+        if(window.innerWidth <= 500){
+            $('html, body').animate({scrollTop: $(scrollTo).offset().top - 65}, 600,'easeInOutExpo');
+        }else{
+            $('html, body').animate({scrollTop: $(scrollTo).offset().top - 50}, 600,'easeInOutExpo');
+        }
+    });
 
     </script>
 </body>
