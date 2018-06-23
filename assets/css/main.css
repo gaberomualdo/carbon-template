@@ -450,6 +450,7 @@ section#contact {
 section#contact p.desc {
     width: 500px;
     display: inline-block;
+    margin-bottom: 25px;
 }
 
 section#contact ul {
@@ -461,14 +462,18 @@ section#contact ul li {
     margin: 0 25px;
     margin-top: 40px;
 }
-section#contact ul li p,section#contact ul li svg{
+section#contact ul li p,section#contact ul li svg {
     display: inline-block;
     line-height: 50px;
     font-size: 25px;
 }
 section#contact ul li svg {
-    width: 50px;
-    height: 50px;
+    width: 52.5px;
+    height: 52.5px;
+    margin-bottom: 5px;
+}
+section#contact ul li svg path {
+    fill: #414f57;
 }
 section#contact ul li p {
     text-align: left;
@@ -478,4 +483,42 @@ section#contact ul li p {
     section#contact p.desc {
         width: 90%;
     }
+}
+
+/* Footer CSS */
+footer {
+    padding: 65px 0;
+    text-align: center;
+    overflow: auto;
+}
+footer p.copyright {
+    font-size: 20px;
+    color: #414f57;
+    display: block;
+    float: left;
+    width: calc(100% - 10px);
+    text-align: center;
+}
+footer ul.links {
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+footer ul.links a {
+    text-decoration: none;
+    height: 35px;
+    width: 35px;
+    padding: 7.5px 5px;
+    display: inline-block;
+}
+footer ul.links a svg {
+    height: 100%;
+    width: 100%;
+}
+footer ul.links a svg path {
+    fill: #c7cbd4;
+    transition: fill 0.15s ease-in-out;
+}
+footer ul.links a svg:hover path {
+    fill: #414f57;
 }
